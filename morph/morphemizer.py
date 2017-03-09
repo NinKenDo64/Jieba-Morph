@@ -4,6 +4,10 @@ import codecs, cPickle as pickle, gzip, os, subprocess, re
 from morph.morphemes import Morpheme
 from morph.util_external import memoize
 
+from deps.jieba import posseg
+from deps.zhon.hanzi import characters as cjkcharacters
+
+
 ####################################################################################################
 # Base Class
 ####################################################################################################
@@ -171,8 +175,7 @@ class CjkCharMorphemizer(Morphemizer):
     Morphemizer that splits sentence into characters and filters for Chinese-Japanese-Korean logographic/idiographic characters.
     '''
     def getMorphemesFromExpr(self, e): # Str -> [Morpheme]
-        from deps.zhon.hanzi import characters
-        return [Morpheme(character, character, 'CJK_CHAR', 'UNKNOWN', character) for character in re.findall('[%s]' % characters, e)]
+        return [Morpheme(character, character, 'CJK_CHAR', 'UNKNOWN', character) for character in re.findall('[%s]' % cjkcharacters, e)]
 
     def getDescription(self):
         return 'CJK characters'
@@ -183,9 +186,7 @@ class CjkCharMorphemizer(Morphemizer):
 
 class JiebaMorphemizer(Morphemizer):
     def getMorphemesFromExpr(self, e): # Str -> [Morpheme]
-        from deps.jieba import posseg
-        from deps.zhon.hanzi import characters
-        e = u''.join(re.findall('[%s]' % characters, e)) # remove all punctuation
+        e = u''.join(re.findall('[%s]' % cjkcharacters, e)) # remove all punctuation
         return [ Morpheme( m.word, m.word, m.flag, u'UNKNOWN', m.word) for m in posseg.cut(e) ] # find morphemes using jieba's POS segmenter
 
     def getDescription(self):
