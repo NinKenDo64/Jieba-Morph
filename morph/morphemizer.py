@@ -26,7 +26,7 @@ class Morphemizer:
 ####################################################################################################
 
 def getAllMorphemizers(): # -> [Morphemizer]
-    return [SpaceMorphemizer(), MecabMorphemizer(), CjkCharMorphemizer(), JiebaMorphemizer()]
+    return [MecabMorphemizer(), JiebaMorphemizer(), SpaceMorphemizer(), CjkCharMorphemizer()]
 
 def getMorphemizerByName(name):
     for m in getAllMorphemizers():
