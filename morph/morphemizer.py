@@ -26,7 +26,7 @@ class Morphemizer:
 ####################################################################################################
 
 def getAllMorphemizers(): # -> [Morphemizer]
-    return [SpaceMorphemizer(), MecabMorphemizer(), CjkCharMorphemizer()]
+    return [SpaceMorphemizer(), MecabMorphemizer(), CjkCharMorphemizer(), JiebaMorphemizer()]
 
 def getMorphemizerByName(name):
     for m in getAllMorphemizers():
@@ -176,3 +176,17 @@ class CjkCharMorphemizer(Morphemizer):
 
     def getDescription(self):
         return 'CJK characters'
+
+####################################################################################################
+# Jieba Morphemizer (Chinese)
+####################################################################################################
+
+class JiebaMorphemizer(Morphemizer):
+    def getMorphemesFromExpr(self, e): # Str -> [Morpheme]
+        from deps.jieba import posseg
+        from deps.zhon.hanzi import characters
+        e = u''.join(re.findall('[%s]' % characters, e)) # remove all punctuation
+        return [ Morpheme( m.word, m.word, m.flag, u'UNKNOWN', m.word) for m in posseg.cut(e) ] # find morphemes using jieba's POS segmenter
+
+    def getDescription(self):
+        return 'Chinese'
