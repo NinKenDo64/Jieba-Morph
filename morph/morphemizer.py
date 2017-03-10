@@ -4,6 +4,13 @@ import codecs, cPickle as pickle, gzip, os, subprocess, re
 from morph.morphemes import Morpheme
 from morph.util_external import memoize
 
+import sys
+import os
+import deps
+deps_path = os.path.dirname(deps.__file__)
+sys.path.insert(0,deps_path)
+print(deps_path)
+
 from deps.jieba import posseg
 from deps.zhon.hanzi import characters as cjkcharacters
 
