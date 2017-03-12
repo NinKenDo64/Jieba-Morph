@@ -32,4 +32,4 @@ This plugin works for following languages:
 
 See the [MorphMan wiki](https://github.com/kaegi/MorphMan/wiki) for more information.
 
-## All credit to kaegi for ressurecting and vastly improving the MorphMan project to make this possible. And for offering his assistance in troubleshooting Jieba-Morph's rocky start.
+__All credit to kaegi for ressurecting and vastly improving the MorphMan project to make this possible. And for offering his assistance in troubleshooting Jieba-Morph's rocky start.__
