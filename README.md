@@ -1,6 +1,6 @@
 # What is Jieba-Morph?
 
-Jieba-Morph is a version of MorphMan which (in addition to the usual Japanese and Space Delimited morphemisers) comes with an included Chinese morphemiser (Jieba), allowing it to perform similar operations on your Chinese flashcards as it currently does with Japanese and/or Space delimited languages.
+Jieba-Morph is a version of MorphMan which (in addition to the usual Japanese and Space Delimited morphemisers) comes with an included Chinese morphemiser (Jieba), allowing it to perform similar operations on your Chinese flashcards as MorphMan currently does with Japanese and/or space delimited languages.
 
 # What is MorphMan?
 MorphMan is an Anki plugin that reorders language cards based on the words you known. This
