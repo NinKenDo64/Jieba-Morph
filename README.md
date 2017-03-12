@@ -24,12 +24,12 @@ After restarting Anki you should see an entry called _morphman_ under _Tools -> 
 This plugin works for following languages:
 -   languages with spaces: __English__, __Russian__, __Spanish__, __etc.__
 -   __Japanese__: you additionally have to to install the _[Japanese Support](https://ankiweb.net/shared/info/3918629684)_ Anki plugin
--   more languages can be added on request if morpheme-splitting-tools are available for it
 -   __Chinese__: Chinese support is included in this version of MorphMan, but unavailable in kaegi's version
+-   more languages can be added on request if morpheme-splitting-tools are available for it
 
 
 # MorphMan Wiki
 
 See the [MorphMan wiki](https://github.com/kaegi/MorphMan/wiki) for more information.
 
-# All credit to kaegi for ressurecting and vastly improving the MorphMan project to make this possible. And for offering his assistance in troubleshooting Jieba-Morph's rocky start.
+## All credit to kaegi for ressurecting and vastly improving the MorphMan project to make this possible. And for offering his assistance in troubleshooting Jieba-Morph's rocky start.
