@@ -16,8 +16,8 @@ This is not ready for inclusion in the main MorphMan branch due to issues packag
 To install Jieba-Morph download the latest .zip archive from the [here](https://github.com/NinKenDo64/Jieba-Morph/releases)
 and extract all files to your _Documents/Anki/addons_. Your folder structure should look like this:
 
--   _Documents/Anki/addons/morphman.py_
--   _Documents/Anki/addons/morph/\*allFilesAndDirectories\*_
+-   _%APPDATA%/Anki2/addons/morphman.py_
+-   _%APPDATA%/Anki2/addons/morph/\*allFilesAndDirectories\*_
 
 After restarting Anki you should see an entry called _morphman_ under _Tools -> Add-ons_. You can find information and troubleshooting tips [here](https://github.com/kaegi/MorphMan/wiki/Installation).
 
