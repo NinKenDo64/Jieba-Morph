@@ -7,7 +7,7 @@ MorphMan is an Anki plugin that reorders language cards based on the words you k
 __greatly__ optimizes your learning queue as you only get sentences with exactly one unknown word (see
 [I+1 principle](https://github.com/kaegi/MorphMan/wiki/I-plus-1) for a more detailed explanation).
 
-# Why isn't this just included with MorphMan proper? Why should we need to use a whole different version just to include Chinese?
+# Why isn't this just included with MorphMan proper?
 
 This is not ready for inclusion in the main MorphMan branch due to issues packaging such a large dependency (Jieba) with all copies of MorphMan. It is here for those who need it, and I will try and keep the repository somewhat in step with the main MorphMan repo until this repository transitions to a module which can be downloaded and used with MorphMan, but not included in it as one whole package. This would be similar to the way MorphMan currently relies on MeCab support coming from the separate Japanese-Support plugin, rather than its own package of MeCab.
 
